@@ -12,7 +12,6 @@ class fishbread:      # 붕어빵 클래스 생성
     def sell(self):
         print(f"{self.종류} 붕어빵이 {self.가격}원에 판매되었습니다")
         fishbread.total_sales += self.가격    # 총 판매 금액 합산
-
 # 호출 될 때 마다 어떤 붕어빵이 얼마에 팔렸는지와 총 판매 금액을 합산해 출력
 
 # 먹기 메서드
