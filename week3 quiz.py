@@ -8,12 +8,27 @@ exchange_rates = {
 # 철수가 가진 돈을 리스트 요소로 하는 리스트 변수 생성
 Money = [13, 200, 13]  # 각각 달러, 엔화, 위안
 
-# 딕셔너리의 Key 값을 리스트로 가져오기
-currencies = list(exchange_rates.keys())
+# 딕셔너리의 Key 값을 리스트로 가져오고 달러 계산
+key = '달러'
+a=exchange_rates[key]
+달러환산 = a*Money[0]
 
-# 통화의 원화 계산과 리스트 슬라이싱을 사용한 계산
-krw_values = [Money[i] * exchange_rates[currency] for i, currency in enumerate(currencies)]
+# 딕셔너리의 Key 값을 리스트로 가져오고 엔 계산
+key = '엔'
+b=exchange_rates[key]
+엔환산 = b*Money[1]
 
-# 결과 출력
-total_krw = sum(krw_values)
-print(f"철수가 가지고 있는 돈의 원화 가치는 {total_krw}원 입니다.")
+# 딕셔너리의 Key 값을 리스트로 가져오고 위안 계산
+key = '위안'
+c=exchange_rates[key]
+위안환산 = c*Money[2]
+
+
+x=(달러환산+엔환산+위안환산)
+
+print(f"철수가 가지고 있는 돈의 원화 가치는 {x}원 입니다.")
+
+환율={'달러':1320,'엔':950,'위안':182}
+돈=[13,200,13]
+총합=(환율['달러']*돈[0]+환율['엔']*돈[1]+환율['위안']*돈[2])
+print(f'철수가 가지고 있는 돈의 원화 가치는 {str(총합)} 원 입니다.')
